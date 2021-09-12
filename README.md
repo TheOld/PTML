@@ -7,7 +7,7 @@ Clone the repo then open a new terminal and navigate to the folder `/src/server`
 
 1.  `yarn && yarn start`
 
-For more details, please chedk the README file included in the project folder.
+For more details, please check the [README](https://github.com/TheOld/PTML/blob/master/server/README.md) file included in the project folder.
 
 ## Run the front-end app
 
