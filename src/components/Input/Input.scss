@@ -1,0 +1,38 @@
+@import '../../styles/css/abstracts/variables';
+@import '../../styles/css/abstracts/mixins';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $margins-md;
+
+  &__label {
+    display: block;
+    margin-bottom: $units-md;
+    line-height: 1.1;
+  }
+
+  &__control {
+    // display: block;
+    margin-bottom: $units-sm;
+    padding: $units-md;
+    border-radius: 0.125rem;
+    background-color: #fff;
+    outline-offset: 0.25rem;
+    border: solid 0.0625rem rgba(67, 82, 90, 0.25);
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    // &:focus {
+    //   box-shadow: 0 0 0 0.5rem white, /* background color */ 0 0 0 0.75rem blue; /* outline color */
+    // }
+  }
+
+  &__error {
+    margin-top: $margins-sm;
+    color: red;
+  }
+}

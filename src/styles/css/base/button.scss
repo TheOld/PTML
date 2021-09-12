@@ -1,0 +1,62 @@
+@import '../abstracts/variables';
+
+.button {
+  position: relative;
+  appearance: none;
+  display: inline-block;
+  padding: $padding-sm $padding-md;
+  border: 1px solid transparent;
+  background: none;
+  background-color: $color-blue;
+  border-radius: $border-radius;
+  color: $color-white;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  outline-offset: 0.25rem;
+  text-align: center;
+  transition: opacity $animations-speed-medium-expand $animations-easing-standard,
+    background $animations-speed-medium-expand $animations-easing-standard,
+    box-shadow $animations-speed-small-expand $animations-easing-standard;
+
+  &::before {
+    background: none;
+    border: 1px solid $color-white;
+    border-radius: 4px;
+    content: '';
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  // &:focus {
+  //   box-shadow: 0 0 0 0.5rem white, /* background color */ 0 0 0 0.75rem blue; /* outline color */
+  // }
+
+  &:hover {
+    background-color: $color-blue-dark;
+  }
+
+  &:visited {
+    background-color: $color-grey-primary;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-grey-fifty;
+    cursor: not-allowed;
+  }
+
+  & + .button {
+    margin-left: 0.5rem;
+  }
+}

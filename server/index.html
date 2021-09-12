@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>PTML Demo</title>
+</head>
+<body>
+  <h2>Example data</h2>
+
+  <ol>
+    <li>
+      Open a terminal in this folder and run
+      <code style="background: #ddd; padding: 2px 5px; color: #333">
+        <span style="color: #000; font-weight: bold">$</span> yarn && yarn start
+      </code>
+    </li>
+
+    <li>See the web console to see example data.</li>
+  </ol>
+</body>
+
+<script>
+  const init = async () => {
+    const exclusions = await fetch('http://localhost:4000/exclusions');
+    const data = await exclusions.json();
+
+    const parts = await fetch('http://localhost:4000/parts');
+    const partsData = await parts.json();
+
+    console.log(`Exclusions:`, data);
+    console.log(`parts:`, partsData);
+  };
+
+  init();
+</script>
