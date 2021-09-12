@@ -3,7 +3,7 @@ ReactJS front-end to consume data from it.
 
 ## Run the NodeJS server
 
-Open a new terminal and navigate to the folder `/ptml/src/server` and run
+Clone the repo then open a new terminal and navigate to the folder `/src/server` and run
 
 1.  `yarn && yarn start`
 
@@ -11,7 +11,7 @@ For more details, please chedk the README file included in the project folder.
 
 ## Run the front-end app
 
-On a new terminal session, navigate to `/ptml/src` and run
+On a new terminal session, navigate to `/src` and run
 
 1. `yarn && yarn start`
 
